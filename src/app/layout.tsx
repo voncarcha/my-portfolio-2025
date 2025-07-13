@@ -3,9 +3,10 @@ import { Poppins, DM_Serif_Text } from 'next/font/google';
 import '@/styles/index.css';
 import '@/styles/slick.css';
 import '@/styles/slick-theme.css';
+import { Analytics } from '@vercel/analytics/react';
 
 const poppins = Poppins({
-  weight: ['400', '500', '600', '700',],
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   variable: '--font-poppins',
 });
@@ -28,7 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${dmSerifText.variable}`}>{children}</body>
+      <body className={`${poppins.variable} ${dmSerifText.variable}`}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
