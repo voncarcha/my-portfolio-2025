@@ -65,7 +65,7 @@ const WorksSection = () => {
         {PROJECTS.map((work) => (
           <div key={work.id}>
             <a href={work.link} target="_blank" rel="noopener noreferrer">
-              <picture className="mx-auto block overflow-hidden bg-app-500 px-[10px]">
+              <picture className="mx-auto block overflow-hidden px-[10px]">
                 <Image
                   src={work.image}
                   alt={work.name}
