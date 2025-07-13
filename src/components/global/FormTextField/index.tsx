@@ -12,7 +12,7 @@ const FormTextField: React.FC<FormTextFieldProps> = ({
       type={type}
       placeholder={placeholder}
       {...register(name)}
-      className="form-text h-[50px] w-full rounded-[10px] border-2 border-solid border-app-400 bg-white px-[10px] text-app-100"
+      className="form-text h-[50px] w-full rounded-[10px] border-2 border-solid border-app-400 bg-app-500 px-[10px] text-app-100"
     />
     {error && (
       <span className="pl-[10px] text-[11px] font-bold text-red-400">
