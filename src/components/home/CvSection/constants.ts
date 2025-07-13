@@ -22,10 +22,10 @@ export const ITEMS: ItemProps[] = [
     logo: '/images/logo-cenote.png',
     bgColor: '#0B1921',
     responsibilities: [
-      'Migrated surveys from Qualtrics to SurveyJS, cutting licensing costs.',
+      'Migrated survey functionality from Qualtrics to SurveyJS, cutting licensing costs.',
       'Integrated AI features to enhance user experience.',
       'Built and maintained React apps with TypeScript and Redux.',
-      'Developed a company-wide UI library using Storybook.',
+      'Developed a company-wide UI library using Storybook and TailwindCSS.',
     ],
   },
   {
@@ -61,6 +61,7 @@ export const ITEMS: ItemProps[] = [
       'Helped integrate REST and GraphQL APIs for various SaaS and subscription-based platforms.',
       'Designed a tailored storefront and inventory system from scratch—focused on clean UX, smooth product management, and integration with backend APIs.',
       'Integrated SaaS APIs using both REST and GraphQL.',
+      'Create design for the website and the e-commerce storefront.',
     ],
   },
   {
