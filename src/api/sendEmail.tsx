@@ -28,7 +28,7 @@ export default async function sendEmail(contactFormData: ContactFormData): Promi
 
   try {
     const response = await resend.emails.send({
-      from: 'ReadySetDev <onboarding@resend.dev>',
+      from: 'My Portfolio <onboarding@resend.dev>',
       to: ['voncarcha@gmail.com'],
       subject: 'Contact Form Submission',
       html: `
