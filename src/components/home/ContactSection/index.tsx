@@ -1,12 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import {
-  Symbol1,
-  Symbol2,
-  Symbol5,
-  Symbol3,
-  Symbol6,
-} from '@/components/global/Svg';
+import { Symbol2, Symbol6 } from '@/components/global/Svg';
 import ThankyouModal from './ThankyouModal';
 
 const ContactForm = dynamic(() => import('./ContactForm'), {
@@ -35,7 +29,7 @@ const ContactSection = () => {
       <span className="absolute bottom-[50px] right-[50px] hidden lg:block">
         <Symbol2 />
       </span>
-      <span className="absolute right-[40%] top-[-100px] hidden lg:block">
+      <span className="absolute left-[10%] top-[-100px] hidden lg:block">
         <Symbol6 />
       </span>
     </article>
