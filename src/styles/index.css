@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-padding-top: 90px;
+  }
+  body {
+    background-color: #dddddd;
+    color: #272727;
+    font-family: var(--font-poppins);
+  }
+  textarea:focus,
+  input:focus {
+    outline: none;
+  }
+
+  .select-country {
+    -o-appearance: none;
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .form-text::placeholder,
+  .select-country::placeholder,
+  .form-textarea::placeholder {
+    color: #777 !important;
+  }
+
+  .gradient-text {
+    background: -webkit-linear-gradient(#6d18ef, #186ef2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .slick-dots li button {
+    background: #c9c7c7 !important;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
