@@ -55,8 +55,9 @@ const WorksSection = () => {
             Selected Works
           </p>
           <h2 className="py-6 font-dm-serif-text text-5xl leading-none md:text-6xl">
-            A curated collection of projects where I applied both design
-            sensibility and front-end expertise.
+            A curated{' '}
+            <span className="gradient-text">collection of projects</span> where
+            I applied both design sensibility and front-end expertise.
           </h2>
         </article>
       </section>
