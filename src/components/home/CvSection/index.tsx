@@ -79,7 +79,7 @@ const CvSection = () => {
       <span className="absolute bottom-[100px] right-[40%] hidden lg:block">
         <Symbol6 />
       </span>
-      <span className="absolute bottom-[150px] right-[50px] hidden lg:block">
+      <span className="absolute bottom-[100px] right-[50px] hidden lg:block">
         <Symbol5 />
       </span>
     </article>
