@@ -62,6 +62,13 @@ const CvSection = () => {
             <span className="text-md block pt-1 font-semibold text-app-100">
               Storybook, Docker, Git, Figma, and many more...
             </span>
+            <span className="block pt-6 text-sm font-semibold text-app-300">
+              Education
+            </span>
+            <span className="text-md block pt-1 font-semibold text-app-100">
+              Lyceum of the Philippines University, Cavite
+              <br /> Bachelor of Science in Information Technology (2008-2013)
+            </span>
           </section>
         </article>
       </section>

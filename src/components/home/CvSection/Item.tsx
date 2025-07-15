@@ -11,22 +11,20 @@ const Item = ({ item }: { item: ItemProps }) => {
 
   return (
     <li
-      className="border-b border-app-400 py-6 leading-normal"
+      className="group relative border-b border-app-400 py-6 leading-normal"
       key={item.company}
     >
-      <button
-        className="group relative flex flex-col md:flex-row gap-4 h-auto w-full md:gap-8 text-left transition-all duration-300"
-        onClick={() => setIsOpen(!isOpen)}
-      >
+      <button className="h-[100px] z-10 absolute w-full top-0 left-0" onClick={() => setIsOpen(!isOpen)}></button>
+      <article className="flex h-auto w-full flex-col gap-4 text-left transition-all duration-300 md:flex-row md:gap-8">
         <span
-          className="flex h-[64px] w-[64px] items-center justify-center rounded-md shadow-xl transition-all duration-300 group-hover:-rotate-3 group-hover:scale-105 relative"
+          className="relative flex h-[64px] w-[64px] items-center justify-center rounded-md shadow-xl transition-all duration-300 group-hover:-rotate-3 group-hover:scale-105"
           style={{
             background: item.bgColor,
           }}
         >
-          <Image 
-            src={item.logo} 
-            alt={item.company} 
+          <Image
+            src={item.logo}
+            alt={item.company}
             fill
             sizes="64px"
             className="object-contain p-2"
@@ -77,7 +75,7 @@ const Item = ({ item }: { item: ItemProps }) => {
         >
           <ArrowIcon />
         </span>
-      </button>
+      </article>
     </li>
   );
 };
