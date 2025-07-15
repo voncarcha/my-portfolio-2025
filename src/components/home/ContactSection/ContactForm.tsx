@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import useGlobalStore from '@/hooks/useGlobalStore';
 import { ContactFormData } from '@/types';
 import { ContactFormSchema } from '@/types';
-import sendEmail from '@/api/sendEmail';
+import sendEmail from '@/actions/sendEmail';
 import { zodResolver } from '@hookform/resolvers/zod';
 import FormTextField from '@/components/global/FormTextField';
 import { useState } from 'react';

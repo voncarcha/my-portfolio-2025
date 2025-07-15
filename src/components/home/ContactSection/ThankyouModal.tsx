@@ -22,9 +22,9 @@ const ThankyouModal = () => {
             priority
           />
         </picture>
-        <h3 className="text-[26px] font-bold">Thank you for contacting us!</h3>
+        <h3 className="text-[26px] font-bold">Thank you for contacting me!</h3>
         <p className="mb-[30px] mt-[10px] text-[20px]">
-          We will get back to you as soon as possible.
+          I will get back to you as soon as possible.
         </p>
         <button
           onClick={() => setContactSuccess(false)}
