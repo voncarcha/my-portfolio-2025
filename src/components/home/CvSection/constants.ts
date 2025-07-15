@@ -53,7 +53,7 @@ export const ITEMS: ItemProps[] = [
     type: 'Freelance',
     date: 'Oct 2020 - April 2022',
     techs:
-      'TypeScript, React, Redux, styled-components, Saleor Framework, GraphQL, Apollo Client',
+      'TypeScript, React, Redux, styled-components, Saleor Framework, GraphQL, Apollo Client, Figma',
     logo: '/images/logo-govfriend.png',
     bgColor: '#fff',
     responsibilities: [
@@ -93,7 +93,8 @@ export const ITEMS: ItemProps[] = [
     bgColor: '#F0242B',
     responsibilities: [
       'Designed and developed responsive websites for various e-commerce projects.',
-      'Translated PSD designs to HTML/CSS and integrated with WordPress.',
+      'Translated PSD designs to HTML/CSS.',
+      'Integrated with WordPress.',
     ],
   },
 ];

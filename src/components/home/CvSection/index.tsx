@@ -5,9 +5,9 @@ import { Symbol5, Symbol6 } from '@/components/global/Svg';
 
 const CvSection = () => {
   return (
-    <article className="relative w-full overflow-hidden pb-[100px] lg:pb-[200px]">
+    <article className="relative w-full pb-[100px] lg:pb-[200px]">
       <section className="mx-auto max-w-screen-xl px-[20px]">
-        <article className="w-full lg:w-1/2">
+        <article className="w-full">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">
             Curriculum Vitae
           </p>
@@ -66,7 +66,7 @@ const CvSection = () => {
         </article>
       </section>
 
-      <span className="absolute right-[50px] top-[50px] hidden lg:block">
+      <span className="absolute right-[250px] top-[-100px] hidden lg:block">
         <Symbol6 />
       </span>
       <span className="absolute bottom-[100px] right-[40%] hidden lg:block">
