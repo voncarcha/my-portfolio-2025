@@ -26,17 +26,23 @@ const CvSection = () => {
           </ul>
           <section className="w-full lg:w-[500px]">
             <span className="block pt-6 text-sm font-semibold text-app-300">
+              Education
+            </span>
+            <span className="text-md block pt-1 font-semibold text-app-100">
+              Lyceum of the Philippines University, Cavite
+              <br /> Bachelor of Science in Information Technology (2008-2013)
+            </span>
+            <span className="block pt-6 text-sm font-semibold text-app-300">
               What I do
             </span>
             <span className="text-md block pt-1 font-semibold text-app-100">
-              Front-end developer, Web Designer
+              Front-end developer (primary), Web Designer
             </span>
             <span className="block pt-6 text-sm font-semibold text-app-300">
               Languages / Frameworks
             </span>
             <span className="text-md block pt-1 font-semibold text-app-100">
-              TypeScript, JavaScript, React, Next.js, Node.js, HTML,
-              CSS/Sass/BEM
+              TypeScript, JavaScript, React, Next.js, Node.js, HTML, CSS
             </span>
             <span className="block pt-6 text-sm font-semibold text-app-300">
               Styling / UI Libraries
@@ -45,29 +51,22 @@ const CvSection = () => {
               TailwindCSS, Ant Design, Material UI, shadcn, styled-components
             </span>
             <span className="block pt-6 text-sm font-semibold text-app-300">
-              CMS
+              Content Management Systems
             </span>
             <span className="text-md block pt-1 font-semibold text-app-100">
-              Strapi, Wordpress, Saleor, WinterCMS, Shopify
+              Strapi, Wordpress, Saleor, Shopify
             </span>
             <span className="block pt-6 text-sm font-semibold text-app-300">
               State Management
             </span>
             <span className="text-md block pt-1 font-semibold text-app-100">
-              React Query, Redux, Zustand, Context API
+              Redux, React Query, Zustand, Context API
             </span>
             <span className="block pt-6 text-sm font-semibold text-app-300">
               Other Tools
             </span>
             <span className="text-md block pt-1 font-semibold text-app-100">
               Storybook, Docker, Git, Figma, and many more...
-            </span>
-            <span className="block pt-6 text-sm font-semibold text-app-300">
-              Education
-            </span>
-            <span className="text-md block pt-1 font-semibold text-app-100">
-              Lyceum of the Philippines University, Cavite
-              <br /> Bachelor of Science in Information Technology (2008-2013)
             </span>
           </section>
         </article>
