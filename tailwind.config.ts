@@ -13,6 +13,9 @@ const config: Config = {
         poppins: 'var(--font-poppins)',
         'dm-serif-text': 'var(--font-dm-serif-text)',
       },
+      screens: {
+        '3xl': '2000px',
+      },
       colors: {
         primary: '#6D18EF',
         secondary: '#186EF2',

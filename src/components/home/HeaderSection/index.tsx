@@ -6,7 +6,7 @@ import Logo from '@/components/global/Logo';
 
 const HeaderSection = () => {
   return (
-    <header className="relative w-full pb-[100px] lg:pb-[350px]">
+    <header className="relative w-full overflow-hidden pb-[100px] lg:pb-[350px]">
       <section className="relative z-10 mx-auto max-w-screen-xl">
         <ul className="hidden items-center gap-[30px] pl-[20px] pt-[20px] text-app-200 lg:flex">
           <li className="flex items-center gap-1">
@@ -27,7 +27,7 @@ const HeaderSection = () => {
           </li>
         </ul>
         <article className="w-full px-[20px] pt-[50px] md:w-1/2 lg:pt-[100px] xl:pt-[250px]">
-          <span className="mb-5 flex items-center justify-center md:hidden">
+          <span className="mb-5 flex items-center justify-center md:absolute md:right-[-250px] md:top-[-100px] md:mb-0 lg:right-[-320px] lg:top-[-150px] xl:right-[-500px] xl:top-[-200px] 2xl:right-[-500px] 2xl:top-[-350px]">
             <Logo />
           </span>
           <p className="text-2xl">
@@ -50,9 +50,9 @@ const HeaderSection = () => {
         </article>
       </section>
 
-      <span className="absolute right-0 top-0 hidden md:block">
+      {/* <span className="absolute right-0 top-0 hidden md:block">
         <LogoBg />
-      </span>
+      </span> */}
       <span className="absolute bottom-[200px] left-[30%] hidden lg:block">
         <Symbol2 />
       </span>
