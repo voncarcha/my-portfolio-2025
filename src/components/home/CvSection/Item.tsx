@@ -35,7 +35,7 @@ const Item = ({ item }: { item: ItemProps }) => {
             {item.company} ({item.location})
           </strong>
           <span className="text-md font-medium text-app-200">
-            {item.position}
+            {item.position}, {item.type}
           </span>
           <span className="text-sm font-medium text-app-200">{item.date}</span>
 

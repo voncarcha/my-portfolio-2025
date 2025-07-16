@@ -51,7 +51,7 @@ export const ITEMS: ItemProps[] = [
     position: 'Front-end Developer / Web Designer',
     location: 'US',
     type: 'Freelance',
-    date: 'Oct 2020 - April 2022',
+    date: 'October 2020 - November 2022',
     techs:
       'TypeScript, React, Redux, styled-components, Saleor Framework, GraphQL, Apollo Client, Figma',
     logo: '/images/logo-govfriend.png',
@@ -69,7 +69,7 @@ export const ITEMS: ItemProps[] = [
     position: 'Front-end Developer',
     location: 'PH',
     type: 'Full-time',
-    date: 'Jun 2015 - Oct 2020',
+    date: 'June 2015 - October 2020',
     techs:
       'React, Redux, Next.js, styled-components, REST API, Strapi CMS, Gulp, Webpack',
     logo: '/images/logo-istack.png',
@@ -86,7 +86,7 @@ export const ITEMS: ItemProps[] = [
     company: 'Codeninja IT Solutions',
     location: 'PH',
     type: 'Full-time',
-    position: 'Web Designer / Web Developer',
+    position: 'Front-end Developer / Web Designer',
     date: 'May 2013 - May 2015',
     techs: 'HTML, CSS, JavaScript, jQuery, WordPress, CodeIgniter, Photoshop',
     logo: '/images/logo-codeninja.png',
