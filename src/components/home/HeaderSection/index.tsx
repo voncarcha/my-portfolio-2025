@@ -53,7 +53,7 @@ const HeaderSection = () => {
       {/* <span className="absolute right-0 top-0 hidden md:block">
         <LogoBg />
       </span> */}
-      <span className="absolute bottom-[200px] left-[30%] hidden lg:block">
+      <span className="absolute bottom-0 right-[50px] lg:bottom-[200px] lg:left-[30%] md:right-[50%] lg:right-auto">
         <Symbol2 />
       </span>
       <span className="absolute bottom-[50px] left-[-50px] hidden lg:block">

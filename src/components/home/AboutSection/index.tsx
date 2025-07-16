@@ -37,7 +37,7 @@ const AboutSection = () => {
           </p>
         </article>
       </section>
-      <span className="absolute bottom-[100px] left-[-50px] hidden lg:block">
+      <span className="absolute bottom-[20px] right-[30px] lg:bottom-[100px] lg:left-[-50px] lg:right-auto">
         <Symbol1 />
       </span>
       <span className="absolute left-[70%] top-[500px] hidden lg:block">

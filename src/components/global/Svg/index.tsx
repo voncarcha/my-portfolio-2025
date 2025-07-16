@@ -1,8 +1,7 @@
 export const Symbol1 = () => {
   return (
     <svg
-      width="156"
-      height="156"
+      className="w-[100px] h-[100px] lg:h-[156px] lg:w-[156px]"
       viewBox="0 0 156 156"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
