@@ -26,7 +26,7 @@ const HeaderSection = () => {
             <span>Manila, Philippines</span>
           </li>
         </ul>
-        <article className="w-full px-[20px] pt-[50px] md:w-1/2 lg:pt-[100px]">
+        <article className="w-full px-[20px] pt-[50px] md:w-1/2 lg:pt-[100px] xl:pt-[250px]">
           <span className="mb-5 flex items-center justify-center md:hidden">
             <Logo />
           </span>
