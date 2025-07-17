@@ -16,7 +16,7 @@ const AboutSection = () => {
             ABOUT ME
           </p>
           <h2 className="py-6 font-dm-serif-text text-5xl leading-none md:text-6xl">
-            <span className="gradient-text">12+ years experience</span> as a
+            <span className="gradient-text">10+ years experience</span> as a
             developer & designer
           </h2>
           <p className="mb-8 text-xl font-light leading-relaxed">

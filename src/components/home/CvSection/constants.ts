@@ -51,7 +51,7 @@ export const ITEMS: ItemProps[] = [
     position: 'Front-end Developer / Web Designer',
     location: 'US',
     type: 'Freelance',
-    date: 'October 2020 - November 2022',
+    date: 'October 2020 - April 2022',
     techs:
       'TypeScript, React, Redux, styled-components, Saleor Framework, GraphQL, Apollo Client, Figma',
     logo: '/images/logo-govfriend.png',
