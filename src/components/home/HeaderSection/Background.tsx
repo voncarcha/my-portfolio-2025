@@ -8,7 +8,7 @@ const Background = () => {
   return (
     <>
       <motion.span
-        className="absolute bottom-0 right-[50px] md:right-[50%] lg:bottom-[200px] lg:left-[30%] lg:right-auto"
+        className="absolute bottom-[50px] right-[50px] md:right-[50%] lg:bottom-[200px] lg:left-[30%] lg:right-auto"
         animate={{ rotate: 360 }}
         transition={{
           duration: 20,
