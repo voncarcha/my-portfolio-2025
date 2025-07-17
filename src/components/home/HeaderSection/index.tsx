@@ -1,8 +1,7 @@
 import { IconEmail, IconPhone, IconPin } from './Icons';
 import React from 'react';
-import LogoBg from '@/components/global/Logo/LogoBg';
-import { Symbol2, Symbol3, Symbol5 } from '@/components/global/Svg';
 import Logo from '@/components/global/Logo';
+import Background from './Background';
 
 const HeaderSection = () => {
   return (
@@ -49,16 +48,7 @@ const HeaderSection = () => {
           </a>
         </article>
       </section>
-
-      {/* <span className="absolute right-0 top-0 hidden md:block">
-        <LogoBg />
-      </span> */}
-      <span className="absolute bottom-0 right-[50px] lg:bottom-[200px] lg:left-[30%] md:right-[50%] lg:right-auto">
-        <Symbol2 />
-      </span>
-      <span className="absolute bottom-[50px] left-[-50px] hidden lg:block">
-        <Symbol3 />
-      </span>
+      <Background />
     </header>
   );
 };

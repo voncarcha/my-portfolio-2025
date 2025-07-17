@@ -1,7 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import { Symbol2, Symbol6 } from '@/components/global/Svg';
 import ThankyouModal from './ThankyouModal';
+import Background from './Background';
 
 const ContactForm = dynamic(() => import('./ContactForm'), {
   ssr: false,
@@ -26,12 +26,7 @@ const ContactSection = () => {
       </section>
       <ThankyouModal />
 
-      <span className="absolute bottom-[50px] right-[50px] hidden lg:block">
-        <Symbol2 />
-      </span>
-      <span className="absolute left-[10%] top-[-100px] hidden lg:block">
-        <Symbol6 />
-      </span>
+      <Background />
     </article>
   );
 };
