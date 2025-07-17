@@ -19,7 +19,7 @@ const Background = () => {
         <Symbol2 />
       </motion.span>
       <motion.span
-        className="absolute left-[10%] top-[-100px] hidden lg:block"
+        className="absolute right-[20px] md:left-[10%] top-[-50px] md:top-auto md:bottom-[50px] md:right-auto"
         animate={{ rotate: -360 }}
         transition={{
           duration: 20,
