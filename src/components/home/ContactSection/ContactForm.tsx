@@ -8,6 +8,7 @@ import sendEmail from '@/actions/sendEmail';
 import { zodResolver } from '@hookform/resolvers/zod';
 import FormTextField from '@/components/global/FormTextField';
 import { useState } from 'react';
+import FormTextArea from '@/components/global/FormTextArea';
 
 const ContactForm = () => {
   const [isLoading, setLoading] = useState(false);
@@ -55,8 +56,7 @@ const ContactForm = () => {
         register={register}
         error={errors.email}
       />
-      <FormTextField
-        type="textarea"
+      <FormTextArea
         placeholder="*Message"
         name="message"
         register={register}

@@ -9,7 +9,7 @@ const FormTextArea: React.FC<FormTextAreaProps> = ({
   <div className="relative">
     <textarea
       placeholder={placeholder}
-      className="form-textarea h-[100px] w-full resize-none rounded-[10px] border-2 border-solid border-[#e2e9ed] bg-transparent p-[10px] max-md:h-[200px]"
+      className="form-textarea py-[10px] rounded-[10px] h-[100px] w-full resize-none border-2 border-solid border-app-400 bg-app-500 px-[10px] text-app-100"
       {...register(name)}
     />
     {error && (
