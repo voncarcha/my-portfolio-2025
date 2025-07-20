@@ -41,38 +41,48 @@ const ContactForm = () => {
     <form
       onSubmit={handleSubmit(onSubmit)}
       className="flex flex-col gap-[20px]"
+      aria-label="Contact form"
     >
-      <FormTextField
-        type="text"
-        placeholder="*Name"
-        name="name"
-        register={register}
-        error={errors.name}
-      />
-      <FormTextField
-        type="email"
-        placeholder="*Email"
-        name="email"
-        register={register}
-        error={errors.email}
-      />
-      <FormTextArea
-        placeholder="*Message"
-        name="message"
-        register={register}
-        error={errors.message}
-      />
+      <fieldset className="flex flex-col gap-[10px] border-0">
+        <legend className="sr-only">Contact Information</legend>
+        <FormTextField
+          type="text"
+          placeholder="*Name"
+          name="name"
+          register={register}
+          error={errors.name}
+        />
+        <FormTextField
+          type="email"
+          placeholder="*Email"
+          name="email"
+          register={register}
+          error={errors.email}
+        />
+        <FormTextArea
+          placeholder="*Message"
+          name="message"
+          register={register}
+          error={errors.message}
+        />
+      </fieldset>
       <div className="flex justify-end">
         <button
           type="submit"
           className={`${
             isLoading
               ? 'cursor-not-allowed bg-slate-900'
-              : 'bg-gradient-app-vertical hover:bg-gradient-app-hover'
-          } h-[50px] w-full md:w-[200px] rounded-[10px] text-[20px] font-bold text-white shadow-xl`}
+              : 'bg-gradient-app-vertical hover:bg-gradient-app-hover focus:ring-2 focus:ring-primary focus:ring-opacity-50'
+          } h-[50px] w-full md:w-[200px] rounded-[10px] text-[20px] font-bold text-white shadow-xl focus:outline-none transition-all duration-200`}
           disabled={isLoading}
+          aria-describedby={isLoading ? 'loading-status' : undefined}
         >
           {isLoading ? 'Sending...' : 'Send'}
+          {isLoading && (
+            <span id="loading-status" className="sr-only">
+              Please wait, your message is being sent
+            </span>
+          )}
         </button>
       </div>
     </form>
