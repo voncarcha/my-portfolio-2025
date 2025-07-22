@@ -15,7 +15,7 @@ const Item = ({ item }: { item: ItemProps }) => {
     <li className="group relative border-b border-app-400 py-6 leading-normal">
       <button
         id={buttonId}
-        className="flex h-auto w-full items-start gap-4 text-left transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 md:gap-8"
+        className="flex h-auto w-full items-start gap-4 text-left transition-all duration-300 md:gap-8"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
         aria-controls={contentId}
