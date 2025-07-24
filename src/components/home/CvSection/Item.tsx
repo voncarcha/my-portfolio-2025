@@ -15,7 +15,7 @@ const Item = ({ item }: { item: ItemProps }) => {
     <li className="group relative border-b border-app-400 py-6 leading-normal">
       <button
         id={buttonId}
-        className="flex h-auto w-full items-start gap-4 text-left transition-all duration-300 md:gap-8"
+        className="flex h-auto w-full items-start gap-4 pr-8 text-left transition-all duration-300 md:gap-8"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
         aria-controls={contentId}
@@ -36,7 +36,7 @@ const Item = ({ item }: { item: ItemProps }) => {
             className="object-contain p-2"
           />
         </span>
-        
+
         <section className="flex max-w-lg flex-1 flex-col">
           <strong className="text-lg">
             {item.company} ({item.location})
@@ -48,9 +48,12 @@ const Item = ({ item }: { item: ItemProps }) => {
         </section>
 
         <span
-          className={classNames('flex-shrink-0 transition-transform duration-300', {
-            'rotate-180': isOpen,
-          })}
+          className={classNames(
+            'absolute right-0 top-[25px] flex-shrink-0 transition-transform duration-300 md:right-[10px]',
+            {
+              'rotate-180': isOpen,
+            },
+          )}
           aria-hidden="true"
         >
           <ArrowIcon />
@@ -65,12 +68,12 @@ const Item = ({ item }: { item: ItemProps }) => {
         })}
         aria-hidden={!isOpen}
       >
-        <div className="pt-4 pl-20">
+        <div className="pl-20 pt-4 md:pl-24">
           <span className="block text-sm font-semibold text-app-100">
             Tools
           </span>
           <span className="max-w-md text-sm text-app-200">{item.techs}</span>
-          
+
           <span className="block pt-4 text-sm font-semibold text-app-100">
             Work & Responsibilities
           </span>
@@ -78,9 +81,12 @@ const Item = ({ item }: { item: ItemProps }) => {
             {item.responsibilities.map((responsibility, index) => (
               <li
                 key={`${item.company}-responsibility-${index}`}
-                className="relative text-sm text-app-200 pl-4"
+                className="relative pl-4 text-sm text-app-200"
               >
-                <span className="absolute left-0 text-app-100 opacity-50" aria-hidden="true">
+                <span
+                  className="absolute left-0 text-app-100 opacity-50"
+                  aria-hidden="true"
+                >
                   •
                 </span>
                 {responsibility}
