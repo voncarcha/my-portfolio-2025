@@ -60,7 +60,7 @@ const Item = ({ item }: { item: ItemProps }) => {
       <div
         id={contentId}
         className={classNames('overflow-hidden transition-all duration-300', {
-          'max-h-96 opacity-100': isOpen,
+          'max-h-auto opacity-100': isOpen,
           'max-h-0 opacity-0': !isOpen,
         })}
         aria-hidden={!isOpen}
