@@ -32,7 +32,7 @@ export const ITEMS: ItemProps[] = [
     company: 'Dottystyle Creative',
     position: 'Senior Front-end Developer',
     location: 'AU',
-    type: 'Freelance',
+    type: 'Project Based',
     date: 'April 2022 - November 2022',
     techs:
       'TypeScript, React, Redux, Storybook, TailwindCSS, SurveyJS, REST API, Google Maps API, Winter CMS',
@@ -51,7 +51,7 @@ export const ITEMS: ItemProps[] = [
     position: 'Front-end Developer / Web Designer',
     location: 'US',
     type: 'Freelance',
-    date: 'October 2020 - April 2022',
+    date: 'October 2020 - Oct 2022',
     techs:
       'TypeScript, React, Redux, styled-components, Saleor Framework, GraphQL, Apollo Client, Figma',
     logo: '/images/logo-govfriend.png',
