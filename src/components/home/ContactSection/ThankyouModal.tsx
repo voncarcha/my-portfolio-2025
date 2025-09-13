@@ -80,7 +80,7 @@ const ThankyouModal = () => {
           <button
             ref={closeButtonRef}
             onClick={() => setContactSuccess(false)}
-            className="h-[50px] w-[200px] rounded-[10px] bg-gradient-app text-[20px] font-bold text-white hover:bg-gradient-app-hover focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 transition-all duration-200"
+            className="h-[50px] w-[200px] rounded-[10px] bg-gradient-app text-[20px] font-bold text-white hover:bg-gradient-app-hover focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
             aria-label="Close thank you message"
           >
             Close

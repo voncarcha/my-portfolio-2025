@@ -13,7 +13,6 @@ const WorksSection = () => {
     dots: true,
     arrows: false,
     autoplay: false,
-    easing: 'ease-in-out',
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -135,7 +134,7 @@ const WorksSection = () => {
                       alt={`Screenshot of ${work.name} project showing the web application interface`}
                       width={600}
                       height={600}
-                      className="transition-opacity duration-300 focus:outline-none"
+                      className="focus:outline-none"
                     />
                   </figure>
                 </article>

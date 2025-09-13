@@ -73,7 +73,7 @@ const ContactForm = () => {
             isLoading
               ? 'cursor-not-allowed bg-slate-900'
               : 'bg-gradient-app-vertical hover:bg-gradient-app-hover focus:ring-2 focus:ring-primary focus:ring-opacity-50'
-          } h-[50px] w-full md:w-[200px] rounded-[10px] text-[20px] font-bold text-white shadow-xl focus:outline-none transition-all duration-200`}
+          } h-[50px] w-full md:w-[200px] rounded-[10px] text-[20px] font-bold text-white shadow-xl focus:outline-none`}
           disabled={isLoading}
           aria-describedby={isLoading ? 'loading-status' : undefined}
         >

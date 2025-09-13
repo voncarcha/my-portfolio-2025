@@ -61,7 +61,7 @@ const HeaderSection = () => {
           </p>
           <a
             href="/#contact"
-            className="inline-block rounded-md bg-gradient-app-vertical px-6 py-3 text-lg text-white shadow-xl hover:bg-gradient-app-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-all duration-200"
+            className="inline-block rounded-md bg-gradient-app-vertical px-6 py-3 text-lg text-white shadow-xl hover:bg-gradient-app-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50"
             role="button"
             aria-describedby="cta-description"
           >

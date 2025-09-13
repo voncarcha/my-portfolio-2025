@@ -15,14 +15,14 @@ const Item = ({ item }: { item: ItemProps }) => {
     <li className="group relative border-b border-app-400 py-6 leading-normal">
       <button
         id={buttonId}
-        className="flex h-auto w-full items-start gap-4 pr-8 text-left transition-all duration-300 md:gap-8"
+        className="flex h-auto w-full items-start gap-4 pr-8 text-left md:gap-8"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
         aria-controls={contentId}
         aria-label={`${isOpen ? 'Collapse' : 'Expand'} details for ${item.company} position`}
       >
         <span
-          className="relative flex h-[64px] w-[64px] flex-shrink-0 items-center justify-center rounded-md shadow-xl transition-all duration-300 group-hover:-rotate-3 group-hover:scale-105"
+          className="relative flex h-[64px] w-[64px] flex-shrink-0 items-center justify-center rounded-md shadow-xl"
           style={{
             background: item.bgColor,
           }}
@@ -49,7 +49,7 @@ const Item = ({ item }: { item: ItemProps }) => {
 
         <span
           className={classNames(
-            'absolute right-0 top-[25px] flex-shrink-0 transition-transform duration-300 md:right-[10px]',
+            'absolute right-0 top-[25px] flex-shrink-0 md:right-[10px]',
             {
               'rotate-180': isOpen,
             },
@@ -62,7 +62,7 @@ const Item = ({ item }: { item: ItemProps }) => {
 
       <div
         id={contentId}
-        className={classNames('overflow-hidden transition-all duration-300', {
+        className={classNames('overflow-hidden', {
           'max-h-auto opacity-100': isOpen,
           'max-h-0 opacity-0': !isOpen,
         })}

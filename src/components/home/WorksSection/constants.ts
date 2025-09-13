@@ -39,6 +39,6 @@ export const PROJECTS = [
     name: 'Traffic Tub',
     image: '/images/bg-proj-traffictub.png',
     services: ['Web Development'],
-    link: 'https://ttub.hodl.limited/',
+    link: 'https://traffictub.com/',
   },
 ];
