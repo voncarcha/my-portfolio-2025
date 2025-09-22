@@ -2,7 +2,7 @@ import HeaderSection from '@/components/home/HeaderSection';
 import AboutSection from '@/components/home/AboutSection';
 import CvSection from '@/components/home/CvSection';
 import WorksSection from '@/components/home/WorksSection';
-import ContactSection from '@/components/home/ContactSection';
+// import ContactSection from '@/components/home/ContactSection';
 import FooterSection from '@/components/home/FooterSection';
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
       <AboutSection />
       <CvSection />
       <WorksSection />
-      <ContactSection />
+      {/* <ContactSection /> */}
       <FooterSection />
     </main>
   );

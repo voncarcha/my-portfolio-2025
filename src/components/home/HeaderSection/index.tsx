@@ -16,7 +16,7 @@ const HeaderSection = () => {
       
       <div className="relative z-10 mx-auto max-w-screen-xl">
         <nav aria-label="Contact information" className="hidden items-center gap-[30px] pl-[20px] pt-[20px] text-app-200 lg:flex">
-          <ul className="flex items-center gap-[30px]" role="list">
+          {/* <ul className="flex items-center gap-[30px]" role="list">
             <li className="flex items-center gap-1">
               <IconPhone />
               <a 
@@ -41,7 +41,7 @@ const HeaderSection = () => {
               <IconPin />
               <span aria-label="Location: Manila, Philippines">Manila, Philippines</span>
             </li>
-          </ul>
+          </ul> */}
         </nav>
         
         <main id="main-content" className="w-full px-[20px] pt-[50px] md:w-1/2 lg:pt-[100px] xl:pt-[250px]">
