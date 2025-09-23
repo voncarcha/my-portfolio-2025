@@ -59,14 +59,14 @@ const HeaderSection = () => {
             Blending front-end expertise with design sensibility to build
             faster, smarter user experiences.
           </p>
-          <a
+          {/* <a
             href="/#contact"
             className="inline-block rounded-md bg-gradient-app-vertical px-6 py-3 text-lg text-white shadow-xl hover:bg-gradient-app-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50"
             role="button"
             aria-describedby="cta-description"
           >
             Let&apos;s Connect
-          </a>
+          </a> */}
           <span id="cta-description" className="sr-only">
             Navigate to contact section to send a message
           </span>
