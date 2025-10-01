@@ -16,7 +16,7 @@ const HeaderSection = () => {
       
       <div className="relative z-10 mx-auto max-w-screen-xl">
         <nav aria-label="Contact information" className="hidden items-center gap-[30px] pl-[20px] pt-[20px] text-app-200 lg:flex">
-          {/* <ul className="flex items-center gap-[30px]" role="list">
+          <ul className="flex items-center gap-[30px]" role="list">
             <li className="flex items-center gap-1">
               <IconPhone />
               <a 
@@ -41,7 +41,7 @@ const HeaderSection = () => {
               <IconPin />
               <span aria-label="Location: Manila, Philippines">Manila, Philippines</span>
             </li>
-          </ul> */}
+          </ul>
         </nav>
         
         <main id="main-content" className="w-full px-[20px] pt-[50px] md:w-1/2 lg:pt-[100px] xl:pt-[250px]">
@@ -59,14 +59,14 @@ const HeaderSection = () => {
             Blending front-end expertise with design sensibility to build
             faster, smarter user experiences.
           </p>
-          {/* <a
+          <a
             href="/#contact"
-            className="inline-block rounded-md bg-gradient-app-vertical px-6 py-3 text-lg text-white shadow-xl hover:bg-gradient-app-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50"
+            className="inline-block rounded-md bg-gradient-app-vertical px-6 py-3 text-lg text-white shadow-xl hover:bg-gradient-app-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-all duration-200"
             role="button"
             aria-describedby="cta-description"
           >
             Let&apos;s Connect
-          </a> */}
+          </a>
           <span id="cta-description" className="sr-only">
             Navigate to contact section to send a message
           </span>
