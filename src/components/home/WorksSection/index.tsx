@@ -13,6 +13,7 @@ const WorksSection = () => {
     dots: true,
     arrows: false,
     autoplay: false,
+    infinite: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -105,7 +106,7 @@ const WorksSection = () => {
         >
           <Slider {...settings} ref={sliderRef}>
             {PROJECTS.map((work, index) => (
-              <div key={work.id} className="">
+              <div key={index} className="">
                 <article 
                   aria-roledescription="slide"
                   aria-label={`Project ${index + 1} of ${PROJECTS.length}: ${work.name}`}
@@ -117,25 +118,32 @@ const WorksSection = () => {
                       rel="noopener noreferrer"
                       title={`View ${work.name} project (opens in new tab)`}
                       className="flex items-center gap-2 px-6 py-2 hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 rounded"
-                      aria-describedby={`project-desc-${work.id}`}
+                      aria-describedby={`project-desc-${work.name}`}
                     >
                       <span className="text-center text-lg font-medium uppercase tracking-widest text-app-100">
                         {work.name}
                       </span>
                       <IconOpenLink />
-                      <span id={`project-desc-${work.id}`} className="sr-only">
+                      <span id={`project-desc-${work.name}`} className="sr-only">
                         Opens in new tab
                       </span>
                     </a>
                   </header>
-                  <figure className="mx-auto block">
-                    <Image
-                      src={work.image}
-                      alt={`Screenshot of ${work.name} project showing the web application interface`}
-                      width={600}
-                      height={600}
-                      className="focus:outline-none"
-                    />
+                  <figure className="mx-auto relative block w-full h-[420px]">
+                    <a
+                      href={work.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title={`View ${work.name} project (opens in new tab)`}
+                      className="block w-full h-full focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 rounded transition-transform hover:scale-[1.02]"
+                    >
+                      <Image
+                        src={work.image}
+                        alt={`Screenshot of ${work.name} project showing the web application interface`}
+                        fill
+                        className="object-cover cursor-pointer"
+                      />
+                    </a>
                   </figure>
                 </article>
               </div>
