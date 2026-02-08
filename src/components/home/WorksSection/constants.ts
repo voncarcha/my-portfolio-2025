@@ -1,5 +1,23 @@
 export const PROJECTS = [
   {
+    name: 'Alowin',
+    image: '/images/bg-alowin.png',
+    services: ['Web Development'],
+    link: 'https://alowin.partners/',
+  },
+  {
+    name: 'Alokingz',
+    image: '/images/bg-alokingz.png',
+    services: ['Web Development'],
+    link: 'https://www.alokingz.club/',
+  },
+  {
+    name: 'Sportskasosyo',
+    image: '/images/bg-sportskasosyo.png',
+    services: ['Web Development'],
+    link: 'https://sportskasosyo.teamroyale.vip/',
+  },
+  {
     name: 'GraciaPay',
     image: '/images/bg-proj-graciapay.png',
     services: ['Web Development', 'UI/UX Design'],
