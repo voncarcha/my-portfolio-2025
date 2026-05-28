@@ -17,20 +17,22 @@ const AboutSection = () => {
           </h2>
           <div className="space-y-8">
             <p className="text-xl font-light leading-relaxed">
-              I combine clean code with strong design sensibility to deliver
-              responsive, accessible, and scalable digital experiences.
+              I combine clean, maintainable code with a strong eye for design to
+              deliver interfaces that are responsive, accessible, and built to
+              scale.
             </p>
             <p className="text-xl font-light leading-relaxed">
-              Proficient in React, TypeScript, Next.js, TailwindCSS, and modern
-              UI/UX best practices. I&apos;m known for translating ideas into
-              polished, production-ready interfaces—quickly and efficiently.
-              Framework-flexible and detail-oriented, I care deeply about
-              performance, accessibility, and developer experience.
+              I work day to day in React, TypeScript, Next.js, and TailwindCSS,
+              turning designs and ideas into polished, production-ready
+              interfaces. Framework-flexible and detail-oriented, I focus on
+              performance, accessibility, and the quality of the code I leave
+              behind.
             </p>
             <p className="text-xl font-light leading-relaxed">
-              Over the years, I&apos;ve helped startups, agencies, and small businesses
-              build their online presence. I&apos;m always exploring new tools and
-              technologies to stay ahead and deliver work that lasts.
+              Over the years I&apos;ve helped startups, agencies, and small
+              businesses establish and grow their presence online. I keep
+              learning new tools and approaches so the work I deliver stays
+              current and holds up over time.
             </p>
           </div>
         </article>

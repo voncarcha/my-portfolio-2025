@@ -72,10 +72,10 @@ const ThankyouModal = () => {
             />
           </picture>
           <h3 id="modal-title" className="text-[26px] font-bold">
-            Thank you for contacting me!
+            Thanks for reaching out!
           </h3>
           <p id="modal-description" className="mb-[30px] mt-[10px] text-[20px]">
-            I will get back to you as soon as possible.
+            I&apos;ve received your message and will get back to you shortly.
           </p>
           <button
             ref={closeButtonRef}

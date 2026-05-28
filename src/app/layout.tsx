@@ -18,8 +18,15 @@ const dmSerifText = DM_Serif_Text({
 });
 
 export const metadata: Metadata = {
-  title: 'Von Carcha Portfolio',
-  description: 'Front-end Developer & Web Designer',
+  title: 'Von Carcha — Front-end Developer & Web Designer',
+  description:
+    'Front-end developer and designer with 10+ years building fast, accessible web interfaces in React, Next.js, and TypeScript. 100+ websites delivered for startups, agencies, and growing businesses.',
+  openGraph: {
+    title: 'Von Carcha — Front-end Developer & Web Designer',
+    description:
+      'Front-end developer and designer with 10+ years building fast, accessible web interfaces in React, Next.js, and TypeScript.',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({

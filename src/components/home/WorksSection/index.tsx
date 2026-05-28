@@ -41,9 +41,9 @@ const WorksSection = () => {
             Selected Works
           </p>
           <h2 className="py-6 font-dm-serif-text text-5xl leading-none md:text-6xl">
-            A curated{' '}
-            <span className="gradient-text">collection of projects</span> where
-            I applied both design sensibility and front-end expertise.
+            A selection of{' '}
+            <span className="gradient-text">recent projects</span> where design
+            and front-end engineering come together.
           </h2>
         </header>
       </section>
@@ -128,10 +128,11 @@ const WorksSection = () => {
                 Want to see more?
               </h3>
               <p className="works-card__cta-text">
-                Get in touch and I&apos;d be happy to share additional work.
+                There&apos;s more, including client and private work. Get in touch
+                and I&apos;ll share what&apos;s relevant.
               </p>
               <span className="works-card__cta-btn">
-                Let&apos;s Talk
+                Get in touch
                 <svg
                   width="18"
                   height="18"

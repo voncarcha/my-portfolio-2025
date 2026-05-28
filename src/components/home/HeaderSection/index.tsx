@@ -124,9 +124,9 @@ const HeaderSection = () => {
               <span className="gradient-text">Web Designer</span>
             </h1>
             <p className="max-w-2xl text-lg font-light leading-relaxed text-app-200 md:text-2xl">
-              Blending front-end expertise with design sensibility to build
-              faster, smarter user experiences with the finish of a product team
-              and the pace of a senior freelancer.
+              I pair front-end engineering with a designer&apos;s eye to build
+              fast, accessible interfaces—from first concept through to
+              production-ready code.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -179,7 +179,7 @@ const HeaderSection = () => {
           <aside className="hidden self-end justify-self-end lg:block">
             <div className="w-[360px] rounded-[8px] border border-app-500 bg-white/70 p-5 shadow-[0_32px_90px_rgba(39,39,39,0.08)] backdrop-blur">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-app-300">
-                Current craft stack
+                Core stack
               </p>
               <ul className="mt-5 flex flex-wrap gap-2 text-sm font-medium text-app-100">
                 {[
@@ -199,8 +199,9 @@ const HeaderSection = () => {
                 ))}
               </ul>
               <p className="mt-6 text-sm leading-relaxed text-app-200">
-                I turn ambiguous product ideas into clean interfaces, production
-                components, and responsive experiences that feel considered.
+                I turn rough product ideas into clean interfaces, reusable
+                components, and responsive experiences—built to last and easy to
+                maintain.
               </p>
             </div>
           </aside>

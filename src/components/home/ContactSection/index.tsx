@@ -16,8 +16,8 @@ const ContactSection = () => {
             Let&apos;s Connect
           </p>
           <h2 className="py-6 font-dm-serif-text text-5xl leading-none md:text-6xl">
-            <span className="gradient-text">Send me a message</span> and I will
-            get back to you as soon as possible.
+            <span className="gradient-text">Let&apos;s work together.</span> Tell
+            me about your project or role and I&apos;ll get back to you shortly.
           </h2>
         </article>
         <article className="w-full pt-[20px] lg:w-1/2 lg:pl-[100px] lg:pt-[50px]">

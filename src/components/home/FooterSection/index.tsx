@@ -36,7 +36,7 @@ const FooterSection = () => {
         </nav>
         <div className="flex flex-col items-center justify-center">
           <p className="text-sm text-app-300">
-            © Copyright 2025. Made by Von Carcha
+            © {new Date().getFullYear()} Von Carcha · Front-end Developer &amp; Web Designer
           </p>
         </div>
       </div>

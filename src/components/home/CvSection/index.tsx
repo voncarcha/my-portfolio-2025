@@ -11,9 +11,9 @@ const CvSection = () => {
             Curriculum Vitae
           </p>
           <h2 className="py-6 font-dm-serif-text text-5xl leading-none md:text-6xl">
-            I&apos;ve worked on{' '}
+            I&apos;ve built{' '}
             <span className="gradient-text">more than 100 websites</span> for
-            great organizations
+            startups, agencies, and growing businesses
           </h2>
         </header>
 
