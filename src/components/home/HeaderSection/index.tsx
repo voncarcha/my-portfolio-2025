@@ -45,10 +45,10 @@ const HeaderSection = () => {
         </nav>
         
         <main id="main-content" className="w-full px-[20px] pt-[50px] md:w-1/2 lg:pt-[100px] xl:pt-[250px]">
-          <span className="mb-5 flex items-center justify-center md:absolute md:right-[-250px] md:top-[-100px] md:mb-0 lg:right-[-320px] lg:top-[-150px] xl:right-[-500px] xl:top-[-200px] 2xl:right-[-500px] 2xl:top-[-350px]">
+         <span className="mb-5 flex items-center justify-center md:absolute md:right-[-250px] md:top-[-100px] md:mb-0 lg:right-[-320px] lg:top-[-150px] xl:right-[-500px] xl:top-[-200px] 2xl:right-[-500px] 2xl:top-[-350px]">
             <Logo />
           </span>
-          <p className="text-2xl">
+<p className="text-2xl">
             👋 Hi, I am <strong>Von Carcha</strong>,
           </p>
           <h1 className="py-6 font-dm-serif-text text-5xl leading-none md:text-6xl">

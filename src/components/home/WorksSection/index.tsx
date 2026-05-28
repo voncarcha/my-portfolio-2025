@@ -1,73 +1,40 @@
 'use client';
 
-import React, { useRef, useEffect } from 'react';
-import Slider from 'react-slick';
+import React, { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { PROJECTS } from './constants';
-import IconOpenLink from './IconOpenLink';
 
 const WorksSection = () => {
-  const sliderRef = useRef<Slider>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const [visibleCards, setVisibleCards] = useState<Set<number>>(new Set());
 
-  const settings = {
-    dots: true,
-    arrows: false,
-    autoplay: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    accessibility: true,
-    focusOnSelect: true,
-    // centerPadding: '100px',
-    responsive: [
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-          // centerPadding: '30px',
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          // centerPadding: '50px',
-        },
-      },
-      {
-        breakpoint: 1440,
-        settings: {
-          slidesToShow: 3,
-          // centerPadding: '100px',
-        },
-      },
-    ],
-  };
-
-  // Handle keyboard navigation
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.target && (e.target as HTMLElement).closest('#works')) {
-        if (e.key === 'ArrowLeft') {
-          e.preventDefault();
-          sliderRef.current?.slickPrev();
-        } else if (e.key === 'ArrowRight') {
-          e.preventDefault();
-          sliderRef.current?.slickNext();
-        }
-      }
-    };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = Number(entry.target.getAttribute('data-index'));
+            setVisibleCards((prev) => new Set([...prev, index]));
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -50px 0px' }
+    );
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    const cards = sectionRef.current?.querySelectorAll('[data-index]');
+    cards?.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
   }, []);
 
   return (
     <article
       className="relative w-full overflow-hidden pb-[150px] lg:pb-[250px]"
       id="works"
+      ref={sectionRef}
     >
+      {/* Section header */}
       <section className="mx-auto max-w-screen-xl px-[20px] pb-10">
         <header className="w-full">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">
@@ -81,78 +48,71 @@ const WorksSection = () => {
         </header>
       </section>
 
-      <section 
-        className="relative mx-auto max-w-[1400px]"
-        aria-label="Portfolio projects carousel"
-        role="region"
+      {/* Projects grid */}
+      <section
+        className="relative mx-auto max-w-screen-xl px-[20px]"
+        aria-label="Portfolio projects"
       >
-        <button
-          className="absolute left-0 top-[52px] z-10 h-[calc(100%-52px)] w-[35px] md:w-[60px] cursor-pointer bg-gradient-to-r from-white to-transparent hover:from-gray-100 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50"
-          onClick={() => sliderRef.current?.slickPrev()}
-          aria-label="View previous project"
-          title="Previous project (Left arrow key)"
-        />
-        <button
-          className="absolute right-0 top-[52px] z-10 h-[calc(100%-52px)] w-[35px] md:w-[60px] cursor-pointer bg-gradient-to-l from-white to-transparent hover:from-gray-100 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50"
-          onClick={() => sliderRef.current?.slickNext()}
-          aria-label="View next project"
-          title="Next project (Right arrow key)"
-        />
-        
-        <div 
-          role="group" 
-          aria-roledescription="carousel"
-          aria-label={`Portfolio projects, ${PROJECTS.length} total`}
-        >
-          <Slider {...settings} ref={sliderRef}>
-            {PROJECTS.map((work, index) => (
-              <div key={index} className="">
-                <article 
-                  aria-roledescription="slide"
-                  aria-label={`Project ${index + 1} of ${PROJECTS.length}: ${work.name}`}
-                >
-                  <header className="flex w-full items-center justify-center py-1">
-                    <a
-                      href={work.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title={`View ${work.name} project (opens in new tab)`}
-                      className="flex items-center gap-2 px-6 py-2 hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 rounded"
-                      aria-describedby={`project-desc-${work.name}`}
-                    >
-                      <span className="text-center text-lg font-medium uppercase tracking-widest text-app-100">
-                        {work.name}
-                      </span>
-                      <IconOpenLink />
-                      <span id={`project-desc-${work.name}`} className="sr-only">
-                        Opens in new tab
-                      </span>
-                    </a>
-                  </header>
-                  <figure className="mx-auto relative block w-full h-[420px]">
-                    <a
-                      href={work.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title={`View ${work.name} project (opens in new tab)`}
-                      className="block w-full h-full focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 rounded transition-transform hover:scale-[1.02]"
-                    >
-                      <Image
-                        src={work.image}
-                        alt={`Screenshot of ${work.name} project showing the web application interface`}
-                        fill
-                        className="object-cover cursor-pointer"
-                      />
-                    </a>
-                  </figure>
-                </article>
+        <div className="works-grid">
+          {PROJECTS.map((work, index) => (
+            <a
+              key={index}
+              data-index={index}
+              href={work.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={`View ${work.name} project (opens in new tab)`}
+              className={`works-card group ${visibleCards.has(index) ? 'works-card--visible' : ''}`}
+              style={{
+                transitionDelay: visibleCards.has(index)
+                  ? `${(index % 3) * 120}ms`
+                  : '0ms',
+              }}
+            >
+              {/* Image */}
+              <Image
+                src={work.image}
+                alt={`Screenshot of ${work.name} project showing the web application interface`}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="works-card__image"
+              />
+
+              {/* Dark overlay that intensifies on hover */}
+              <div className="works-card__overlay" />
+
+              {/* Bottom content - always visible */}
+              <div className="works-card__content">
+                {/* Service tags */}
+                <div className="works-card__tags">
+                  {work.services.map((service) => (
+                    <span key={service} className="works-card__tag">
+                      {service}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Project name + arrow */}
+                <div className="works-card__title-row">
+                  <h3 className="works-card__title">{work.name}</h3>
+                  <svg
+                    className="works-card__arrow"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </div>
               </div>
-            ))}
-          </Slider>
-        </div>
-        
-        <div className="sr-only" aria-live="polite" aria-atomic="true">
-          Use left and right arrow keys to navigate between projects
+            </a>
+          ))}
         </div>
       </section>
     </article>

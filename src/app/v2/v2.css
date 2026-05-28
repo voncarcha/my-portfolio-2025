@@ -1,0 +1,169 @@
+/* ═══════════════════════════════════════
+   V2 EDITORIAL PORTFOLIO — GLOBAL STYLES
+   ═══════════════════════════════════════ */
+
+.v2-root {
+  --v2-bg: #0a0a0a;
+  --v2-bg-elevated: #111111;
+  --v2-bg-subtle: #161616;
+  --v2-text: #e8e4df;
+  --v2-text-muted: #8a857e;
+  --v2-text-dim: #4a4843;
+  --v2-accent: #c9b99a;
+  --v2-border: #1e1e1e;
+  --v2-border-light: #2a2a2a;
+
+  --v2-font-serif: var(--font-cormorant), 'Cormorant Garamond', 'Georgia', serif;
+  --v2-font-sans: var(--font-inter), 'Inter', -apple-system, sans-serif;
+
+  --v2-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --v2-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  background-color: var(--v2-bg);
+  color: var(--v2-text);
+  font-family: var(--v2-font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Smooth Scroll ─── */
+html:has(.v2-root) {
+  scroll-behavior: smooth;
+}
+
+/* ─── Selection ─── */
+.v2-root ::selection {
+  background-color: var(--v2-accent);
+  color: var(--v2-bg);
+}
+
+/* ─── Custom Cursor ─── */
+.v2-cursor {
+  width: 16px;
+  height: 16px;
+  background: var(--v2-text);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: width 0.4s var(--v2-ease-out),
+              height 0.4s var(--v2-ease-out),
+              margin 0.4s var(--v2-ease-out);
+}
+
+.v2-cursor.is-hovering {
+  width: 64px;
+  height: 64px;
+  margin-left: -24px;
+  margin-top: -24px;
+}
+
+/* ─── Project Card Hover ─── */
+.v2-project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.v2-project-card .v2-project-image {
+  transition: transform 1.2s var(--v2-ease-out),
+              opacity 0.6s var(--v2-ease-out);
+}
+
+.v2-project-card:hover .v2-project-image {
+  transform: scale(1.04);
+}
+
+.v2-project-card .v2-project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 10, 0.7) 0%,
+    rgba(10, 10, 10, 0) 50%
+  );
+  opacity: 0;
+  transition: opacity 0.8s var(--v2-ease-out);
+}
+
+.v2-project-card:hover .v2-project-overlay {
+  opacity: 1;
+}
+
+.v2-project-card .v2-project-meta {
+  transition: opacity 0.6s var(--v2-ease-out),
+              transform 0.6s var(--v2-ease-out);
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.v2-project-card:hover .v2-project-meta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Horizontal Rule ─── */
+.v2-hr {
+  border: none;
+  height: 1px;
+  background: var(--v2-border);
+}
+
+/* ─── Reveal Animation Base ─── */
+.v2-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.v2-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Nav Link Hover ─── */
+.v2-nav-link {
+  position: relative;
+}
+
+.v2-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--v2-text);
+  transition: width 0.6s var(--v2-ease-out);
+}
+
+.v2-nav-link:hover::after {
+  width: 100%;
+}
+
+/* ─── Parallax Container ─── */
+.v2-parallax-container {
+  overflow: hidden;
+}
+
+/* ─── Grid ─── */
+.v2-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(16px, 2vw, 32px);
+}
+
+/* ─── Noise Overlay ─── */
+.v2-noise::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
