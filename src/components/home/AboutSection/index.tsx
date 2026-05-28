@@ -6,7 +6,7 @@ import Background from './Background';
 const AboutSection = () => {
   return (
     <section className="relative w-full overflow-hidden pb-[100px] lg:pb-[250px]" id="about" aria-labelledby="about-heading">
-      <div className="mx-auto max-w-screen-xl">
+      <div className="relative z-10 mx-auto max-w-screen-xl">
         <article className="w-full px-[20px] lg:w-1/2">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">
             ABOUT ME

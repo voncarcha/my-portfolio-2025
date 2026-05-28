@@ -430,4 +430,105 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* ===== Background symbols ===== */
+  .symbol {
+    pointer-events: none;
+    will-change: transform, opacity;
+  }
+
+  @keyframes symbolFloat {
+    0% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate3d(0, -26px, 0) rotate(4deg);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+  }
+
+  @keyframes symbolSway {
+    0% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    33% {
+      transform: translate3d(22px, -14px, 0) rotate(6deg);
+    }
+    66% {
+      transform: translate3d(-12px, -8px, 0) rotate(-4deg);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+  }
+
+  @keyframes symbolDrift {
+    0% {
+      transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+    }
+    25% {
+      transform: translate3d(-18px, 16px, 0) rotate(-7deg) scale(1.05);
+    }
+    50% {
+      transform: translate3d(10px, 24px, 0) rotate(4deg) scale(1);
+    }
+    75% {
+      transform: translate3d(18px, 10px, 0) rotate(7deg) scale(0.96);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+    }
+  }
+
+  @keyframes symbolSpin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes symbolBreathe {
+    0%,
+    100% {
+      opacity: 0.1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.26;
+      transform: scale(1.1);
+    }
+  }
+
+  .symbol--float {
+    animation: symbolFloat 9s ease-in-out infinite;
+  }
+  .symbol--sway {
+    animation: symbolSway 13s ease-in-out infinite;
+  }
+  .symbol--drift {
+    animation: symbolDrift 18s ease-in-out infinite;
+  }
+  .symbol--spin {
+    animation: symbolSpin 38s linear infinite;
+  }
+  .symbol--breathe {
+    animation: symbolBreathe 7s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .symbol--float,
+    .symbol--sway,
+    .symbol--drift,
+    .symbol--spin,
+    .symbol--breathe {
+      animation: none;
+    }
+    .symbol--breathe {
+      opacity: 0.18;
+    }
+  }
 }
