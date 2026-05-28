@@ -10,7 +10,7 @@ const ContactForm = dynamic(() => import('./ContactForm'), {
 const ContactSection = () => {
   return (
     <article className="relative w-full pb-[100px] lg:pb-[200px]" id="contact">
-      <section className="mx-auto flex max-w-screen-xl flex-col px-[20px] lg:flex-row">
+      <section className="relative z-10 mx-auto flex max-w-screen-xl flex-col px-[20px] lg:flex-row">
         <article className="w-full lg:w-1/2">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">
             Let&apos;s Connect
