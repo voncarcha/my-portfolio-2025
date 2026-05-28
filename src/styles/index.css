@@ -149,7 +149,7 @@
       grid-row: span 2;
     }
 
-    /* Row 3: Menelaou Law (5) + PHP Global (7) */
+    /* Row 3: Menelaou Law (5) + Amber Digital (7) */
     .works-grid > a:nth-child(6) {
       grid-column: span 5;
       grid-row: span 2;
@@ -159,7 +159,7 @@
       grid-row: span 2;
     }
 
-    /* Row 4: Amber Digital + Beanstalk Ventures + Traffic Tub (4+4+4) */
+    /* Row 4: Beanstalk Ventures + Traffic Tub + CTA (4+4+4) */
     .works-grid > a:nth-child(8),
     .works-grid > a:nth-child(9),
     .works-grid > a:nth-child(10) {
@@ -340,6 +340,89 @@
   .works-card:focus-visible .works-card__image {
     transform: scale(1.06);
     filter: brightness(0.6);
+  }
+
+  /* ===== Works CTA Card ===== */
+  .works-card--cta {
+    background: linear-gradient(
+      135deg,
+      rgba(109, 24, 239, 0.08) 0%,
+      rgba(24, 110, 242, 0.08) 100%
+    );
+    border: 1px dashed rgba(109, 24, 239, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 320px;
+  }
+
+  @media (min-width: 1024px) {
+    .works-card--cta {
+      min-height: unset;
+    }
+  }
+
+  .works-card--cta:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(109, 24, 239, 0.14) 0%,
+      rgba(24, 110, 242, 0.14) 100%
+    );
+    border-color: rgba(109, 24, 239, 0.5);
+  }
+
+  .works-card__cta-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 24px;
+    gap: 12px;
+  }
+
+  .works-card__cta-title {
+    font-family: var(--font-dm-serif-text);
+    font-size: 24px;
+    color: #272727;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 1024px) {
+    .works-card__cta-title {
+      font-size: 28px;
+    }
+  }
+
+  .works-card__cta-text {
+    font-size: 14px;
+    color: #5c5959;
+    max-width: 360px;
+    line-height: 1.6;
+  }
+
+  .works-card__cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 10px 24px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: linear-gradient(135deg, #6d18ef, #186ef2);
+    border-radius: 100px;
+    transition:
+      transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(109, 24, 239, 0.2);
+  }
+
+  .works-card--cta:hover .works-card__cta-btn {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 40px rgba(109, 24, 239, 0.35);
   }
 }
 

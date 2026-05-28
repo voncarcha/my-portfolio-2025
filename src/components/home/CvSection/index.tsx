@@ -4,7 +4,7 @@ import Background from './Background';
 
 const CvSection = () => {
   return (
-    <article className="relative w-full pb-[100px] lg:pb-[200px]">
+    <article id="experience" className="relative w-full pb-[100px] lg:pb-[200px]">
       <section className="mx-auto max-w-screen-xl px-[20px]">
         <header className="w-full">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">

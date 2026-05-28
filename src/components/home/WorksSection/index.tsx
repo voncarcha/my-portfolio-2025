@@ -113,6 +113,41 @@ const WorksSection = () => {
               </div>
             </a>
           ))}
+          <a
+            href="#contact"
+            data-index={PROJECTS.length}
+            className={`works-card works-card--cta group ${visibleCards.has(PROJECTS.length) ? 'works-card--visible' : ''}`}
+            style={{
+              transitionDelay: visibleCards.has(PROJECTS.length)
+                ? `${(PROJECTS.length % 3) * 120}ms`
+                : '0ms',
+            }}
+          >
+            <div className="works-card__cta-inner">
+              <h3 className="works-card__cta-title">
+                Want to see more?
+              </h3>
+              <p className="works-card__cta-text">
+                Get in touch and I&apos;d be happy to share additional work.
+              </p>
+              <span className="works-card__cta-btn">
+                Let&apos;s Talk
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </span>
+            </div>
+          </a>
         </div>
       </section>
     </article>

@@ -36,12 +36,6 @@ export const PROJECTS = [
     link: 'https://menelaou-law.com/',
   },
   {
-    name: 'PHP Global',
-    image: '/images/bg-proj-php.png',
-    services: ['Web Development'],
-    link: 'https://php.je/',
-  },
-  {
     name: 'Amber Digital',
     image: '/images/bg-proj-amber.png',
     services: ['Web Development'],
