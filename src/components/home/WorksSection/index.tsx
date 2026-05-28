@@ -14,7 +14,7 @@ const WorksSection = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const index = Number(entry.target.getAttribute('data-index'));
-            setVisibleCards((prev) => new Set([...prev, index]));
+            setVisibleCards((prev) => new Set(prev).add(index));
             observer.unobserve(entry.target);
           }
         });
