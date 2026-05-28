@@ -105,10 +105,10 @@ const HeaderSection = () => {
 
         <section
           id="main-content"
-          className="relative grid min-h-[calc(100vh-120px)] items-center gap-12 pt-14 lg:grid-cols-[minmax(0,0.92fr)_minmax(360px,0.72fr)] lg:pt-24"
+          className="relative grid lg:min-h-[calc(100vh-120px)] lg:items-center gap-12 pt-0 lg:grid-cols-[minmax(0,0.92fr)_minmax(360px,0.72fr)] xl:pt-24"
           aria-labelledby="hero-heading"
         >
-          <span className="pointer-events-none absolute left-1/2 top-[-45px] -z-10 flex -translate-x-1/2 justify-center opacity-[0.055] md:left-auto md:right-[-340px] md:top-[-130px] md:translate-x-0 lg:right-[-520px] lg:top-[-260px] xl:right-[-620px]">
+          <span className="pointer-events-none absolute left-[100%] top-[45px] -z-10 flex -translate-x-1/2 justify-center opacity-[0.055] md:left-auto md:right-[-340px] md:top-[-130px] md:translate-x-0 lg:right-[-420px] lg:top-[-260px] xl:right-[-620px]">
             <Logo />
           </span>
 

@@ -12,7 +12,7 @@ const Background = () => {
       <span className="symbol symbol--breathe absolute bottom-[50px] right-[50px] hidden text-primary lg:block">
         <Symbol2 />
       </span>
-      <span className="symbol symbol--drift absolute right-[20px] top-[-50px] text-secondary opacity-[0.18] md:bottom-[50px] md:left-[10%] md:right-auto md:top-auto">
+      <span className="symbol symbol--drift absolute right-[20px] top-[50px] text-secondary opacity-[0.18] md:bottom-[50px] md:left-[10%] md:right-auto md:top-auto">
         <Symbol6 />
       </span>
       <span
